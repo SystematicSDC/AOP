@@ -36,14 +36,13 @@ public class MathController {
 
 
 
-        //create array with random numbers
         int[] array = mathService.generateRandomNumbersArray(100);
 
         System.out.print("Sorting array: ");
         Arrays.stream(array).forEach(i -> System.out.printf("%d ", i));
         System.out.printf("%n");
 
-        //sort with different algorithms
+
         mathService.sort(array.clone(), new BubbleSort());
         mathService.sort(array.clone(), new HeapSort());
         mathService.sort(array.clone(), new InsertionSort());
